@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+//import header component
+//import topstory component
+//import stories componet
+//import error component
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <main className="App">
+      <header>
+        <p>Header component goes here</p>
       </header>
-    </div>
+      <h1>News Reader</h1>
+      <h2>Top story component goes here</h2>
+      <h3>Stories go here</h3>
+      <p>Story</p>
+      <p>Story</p>
+      <p>Story</p>
+      <p>Story</p>
+      <p>Story</p>
+    </main>
   );
 }
 
