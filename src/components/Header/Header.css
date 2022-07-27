@@ -1,0 +1,42 @@
+.Header {
+  background-color: #282c34;
+  width: 100vw;
+  /* display: flex; */
+  /* flex-direction: column; */
+  font-size: calc(15px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  color: white;
+  position: sticky;
+  /* padding-left: 6%; */
+}
+
+.Header-title:hover, .home:hover, select:hover, .search:hover {
+  color: #00FFCE;
+}
+
+.Nav {
+  display: flex;
+  flex-direction: row;
+  background-color: #19B697;
+  color: white;
+  width: 100vw;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  /* padding-left: 5%; */
+}
+
+.home, .section-select, .search {
+  font-size: 25px;
+}
+
+.section-select, .search {
+  cursor: pointer;
+  /* font-size: 25px; */
+  font-weight: bold;
+  color: white;
+  margin-left: 1%;
+  background-color: transparent;
+  border: none;
+  resize: none;
+  outline: none;
+}
