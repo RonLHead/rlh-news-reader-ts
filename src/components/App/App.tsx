@@ -6,8 +6,30 @@ import Header from '../Header/Header';
 //import error component
 import './App.css';
 
+export interface IStories {
+  abstract: string;
+  byline: string;
+  created_date: string;
+  des_facet: string[];
+  geo_facet: string[];
+  item_type: string;
+  kicker: string;
+  material_type_facet: string;
+  multimedia: object[];
+  org_facet: string[];
+  per_facet: string[];
+  published_date: string;
+  section: string;
+  short_url: string;
+  subsection: string;
+  title: string;
+  updated_date: string;
+  uri: string;
+  url: string;
+}
+
 function App() {
-  const [stories, setStories] = useState([]);
+  const [stories, setStories] = useState <IStories[]>([]);
   const [section, setSection] = useState('');
 
   const getStories = (section:string) => {
@@ -16,18 +38,18 @@ function App() {
     }
     fetchStories(section)
       .then(data => {
-        // console.log(data.results)
         setStories(data.results);
       })
   }
 
   useEffect(() => {
     getStories(section)
+    
   }, [])
 
   return (
     <main className="App">
-      <Header />
+      <Header stories={stories}/>
       <h2>Top story component goes here</h2>
       <h3>Stories go here</h3>
       <p>Story</p>
