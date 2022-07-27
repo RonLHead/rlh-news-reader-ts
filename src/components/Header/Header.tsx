@@ -1,6 +1,13 @@
+import { FC } from 'react';
+import { IStories } from '../App/App';
 import './Header.css';
 
-const Header = () => {
+interface HeaderProps {
+  stories:IStories[];
+}
+
+const Header: FC<HeaderProps> = ({ stories }) => {
+  
   return (
     <header className='Header'>
       <h1 className='Header-title'>NYT News Reader</h1>
