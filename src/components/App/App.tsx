@@ -15,7 +15,7 @@ export interface IStories {
   item_type: string;
   kicker: string;
   material_type_facet: string;
-  multimedia: object[];
+  multimedia: IMultimedia[];
   org_facet: string[];
   per_facet: string[];
   published_date: string;
@@ -26,6 +26,17 @@ export interface IStories {
   updated_date: string;
   uri: string;
   url: string;
+}
+
+export interface IMultimedia {
+  caption: string;
+  copyright: string;
+  format: string;
+  height: number;
+  subtype: string;
+  type: string;
+  url: string;
+  width: number;
 }
 
 function App() {
@@ -54,7 +65,7 @@ function App() {
     <main className="App">
       <Header stories={stories} getSection={getSection}/>
       <h2>Top story component goes here</h2>
-      <Stories />
+      <Stories stories={stories}/>
     </main>
   );
 }
