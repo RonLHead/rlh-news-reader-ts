@@ -59,6 +59,7 @@ function App() {
 
   const getSection = (section:string) => {
     setSection(section)
+    getStories(section)
   }
 
   return (
