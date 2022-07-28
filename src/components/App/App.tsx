@@ -44,12 +44,15 @@ function App() {
 
   useEffect(() => {
     getStories(section)
-    
-  }, [])
+  }, []);
+
+  const getSection = (section:string) => {
+    setSection(section)
+  }
 
   return (
     <main className="App">
-      <Header stories={stories}/>
+      <Header stories={stories} getSection={getSection}/>
       <h2>Top story component goes here</h2>
       <h3>Stories go here</h3>
       <p>Story</p>
