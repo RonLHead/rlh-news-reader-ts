@@ -66,7 +66,7 @@ function App() {
 
   return (
     <main className="App">
-      <Header stories={stories} getSection={getSection}/>
+      <Header getSection={getSection}/>
       <TopStory topStory={topStory!} />
       <Stories stories={stories}/>
     </main>
