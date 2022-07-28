@@ -42,7 +42,7 @@ export interface IMultimedia {
 function App() {
   const [stories, setStories] = useState <IStories[]>([]);
   const [section, setSection] = useState('');
-  const [topStory, setTopStory] = useState <IStories[]>([])
+  const [topStory, setTopStory] = useState <IStories>()
 
   const getStories = (section:string) => {
     if(!section) {
@@ -67,7 +67,7 @@ function App() {
   return (
     <main className="App">
       <Header stories={stories} getSection={getSection}/>
-      <TopStory />
+      <TopStory topStory={topStory!} />
       <Stories stories={stories}/>
     </main>
   );
