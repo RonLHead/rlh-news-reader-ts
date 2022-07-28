@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { fetchStories } from '../../apiCalls';
 import Header from '../Header/Header';
 import Stories from '../Stories/Stories';
-//import topstory component
+import TopStory from '../TopStory/TopStory';
 //import error component
 import './App.css';
 
@@ -67,7 +67,7 @@ function App() {
   return (
     <main className="App">
       <Header stories={stories} getSection={getSection}/>
-      <h2>Top story component goes here</h2>
+      <TopStory />
       <Stories stories={stories}/>
     </main>
   );
