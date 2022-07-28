@@ -41,7 +41,7 @@ const Stories: FC<HeaderProps> = ({ stories }) => {
   })
   return (
     <section className='stories-wrapper'>
-      <div className='top-story-container'>
+      <div className='story-container'>
         {storiesList}
       </div>
     </section>
