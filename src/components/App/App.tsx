@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { fetchStories } from '../../apiCalls';
 import Header from '../Header/Header';
+import Stories from '../Stories/Stories';
 //import topstory component
-//import stories componet
 //import error component
 import './App.css';
 
@@ -15,7 +15,7 @@ export interface IStories {
   item_type: string;
   kicker: string;
   material_type_facet: string;
-  multimedia: object[];
+  multimedia: IMultimedia[];
   org_facet: string[];
   per_facet: string[];
   published_date: string;
@@ -26,6 +26,17 @@ export interface IStories {
   updated_date: string;
   uri: string;
   url: string;
+}
+
+export interface IMultimedia {
+  caption: string;
+  copyright: string;
+  format: string;
+  height: number;
+  subtype: string;
+  type: string;
+  url: string;
+  width: number;
 }
 
 function App() {
@@ -48,18 +59,14 @@ function App() {
 
   const getSection = (section:string) => {
     setSection(section)
+    getStories(section)
   }
 
   return (
     <main className="App">
       <Header stories={stories} getSection={getSection}/>
       <h2>Top story component goes here</h2>
-      <h3>Stories go here</h3>
-      <p>Story</p>
-      <p>Story</p>
-      <p>Story</p>
-      <p>Story</p>
-      <p>Story</p>
+      <Stories stories={stories}/>
     </main>
   );
 }
