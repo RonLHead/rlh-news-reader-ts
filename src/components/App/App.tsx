@@ -73,7 +73,12 @@ function App() {
     <main className="App">
       <Header getSection={getSection}/>
       <TopStory topStory={topStory!} />
-      <Stories stories={stories}/>
+      <Routes>
+        <Route index element={<Stories stories={stories} />}/>
+        <Route path=':section/:id' element={<SingleStory stories={stories}/>}/>
+      </Routes>
+      
+      
     </main>
   );
 }
