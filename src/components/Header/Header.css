@@ -1,16 +1,17 @@
 .Header {
   background-color: #282c34;
   width: 100vw;
-  /* display: flex; */
-  /* flex-direction: column; */
   font-size: calc(15px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   color: white;
   position: sticky;
-  /* padding-left: 6%; */
 }
 
-.Header-title:hover, .home:hover, select:hover, .search:hover {
+.Header-title:hover, .home:hover, select:hover {
   color: #00FFCE;
+}
+
+.Header-title {
+  font-size: 40px;
 }
 
 .Nav {
@@ -22,16 +23,15 @@
   justify-content: space-around;
   position: sticky;
   top: 0;
-  /* padding-left: 5%; */
+  padding-left: 5%;
 }
 
 .home, .section-select, .search {
   font-size: 25px;
 }
 
-.section-select, .search {
+::placeholder, .section-select, .search, .Header-title, .home {
   cursor: pointer;
-  /* font-size: 25px; */
   font-weight: bold;
   color: white;
   margin-left: 1%;
