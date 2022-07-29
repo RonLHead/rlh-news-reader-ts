@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import { fetchStories } from '../../apiCalls';
+import { NavLink } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Header from '../Header/Header';
 import Stories from '../Stories/Stories';
 import TopStory from '../TopStory/TopStory';
@@ -63,6 +65,8 @@ function App() {
     setSection(section)
     getStories(section)
   }
+
+
 
   return (
     <main className="App">
