@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import Header from '../Header/Header';
 import Stories from '../Stories/Stories';
 import TopStory from '../TopStory/TopStory';
+import SingleStory from '../SingleStory/SingleStory';
 //import error component
 import './App.css';
 
