@@ -1,5 +1,6 @@
 import { FC } from 'react';
-import { isPropertySignature } from 'typescript';
+import { NavLink, } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './Header.css';
 
 interface HeaderProps {
@@ -10,12 +11,16 @@ const Header: FC<HeaderProps> = ({ getSection }) => {
 
   return (
     <header className='Header'>
-      <h1 className='Header-title'>NYT News Reader</h1>
+      <NavLink to='/' style={{ textDecoration: 'none', color: 'white' }}>
+        <button className='Header-title' onClick={e => getSection('home')}>NYT News Reader</button>
+      </NavLink>
       <nav className='Nav'>
-        <h2 className='home'>Home</h2>
+        <NavLink to='/' style={{ textDecoration: 'none', color: 'white' }}>
+          <button className='home'>Home</button>
+        </NavLink>
         <form>
-          <select className='section-select' onChange={e => getSection(e.target.value)}>
-            <option value="" disabled selected hidden key='default'>Filter by Category:</option>
+          <select id='category-select' className='section-select' onChange={e => getSection(e.target.value)}>
+            <option value="" disabled selected hidden key='default'>Filter by Category:</option>  
             <option value='home' key='all'>All</option>
             <option value='arts'>Arts</option>
             <option value='automobiles'>Automobiles</option>
