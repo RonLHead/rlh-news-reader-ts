@@ -71,6 +71,11 @@ function App() {
 
   return (
     <main className="App">
+      <header className='App-header'>
+        <NavLink to='/' style={{ textDecoration: 'none', color: 'white' }}>
+          <button className='header-title' onClick={e => getSection('home')}>NYT News Reader</button>
+        </NavLink>
+      </header>
       <Header getSection={getSection}/>
       <Routes>
         <Route index element={<Stories stories={stories} topStory={topStory!}/>}/>
