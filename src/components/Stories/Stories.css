@@ -1,5 +1,14 @@
 .stories-wrapper {
-  margin-left: 5%;
+  margin-top: 2%;
+  margin-left: 7%;
+}
+
+.top-story-title {
+  color: #19B697;
+  text-align:left;
+  margin-left: 1%;
+  /* margin-bottom: 0; */
+  font-size: 35px;
 }
 
 .story-container {
@@ -12,11 +21,12 @@
   margin-bottom: 1%;
   margin-top: 1%;
   justify-content: space-around;
+  cursor: pointer;
+  align-items:center;
 }
 
 .storiesList-info-container {
   width: 80%;
-  
 }
 
 .story-title {
