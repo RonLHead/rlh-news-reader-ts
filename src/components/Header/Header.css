@@ -3,7 +3,8 @@
   width: 100vw;
   font-size: calc(15px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
   color: white;
-  position: sticky;
+  text-align: center;
+  /* position: sticky; */
 }
 
 .Header-title:hover, .home:hover, select:hover {
@@ -15,22 +16,25 @@
 }
 
 .Nav {
-  display: flex;
-  flex-direction: row;
   background-color: #19B697;
   color: white;
   width: 100vw;
-  justify-content: space-around;
   position: sticky;
-  top: 0;
   padding-left: 5%;
 }
 
-.home, .section-select, .search {
+.Nav-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.home, .section-select {
   font-size: 25px;
 }
 
-::placeholder, .section-select, .search, .Header-title, .home {
+::placeholder, .section-select, .Header-title, .home {
   cursor: pointer;
   font-weight: bold;
   color: white;
@@ -39,4 +43,8 @@
   border: none;
   resize: none;
   outline: none;
+}
+
+.Nav-go-back {
+  width: 10%;
 }
