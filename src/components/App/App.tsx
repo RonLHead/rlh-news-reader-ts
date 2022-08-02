@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import Header from '../Header/Header';
 import Stories from '../Stories/Stories';
 import TopStory from '../TopStory/TopStory';
+import SingleStory from '../SingleStory/SingleStory';
 //import error component
 import './App.css';
 
@@ -70,9 +71,19 @@ function App() {
 
   return (
     <main className="App">
+      <header className='App-header'>
+        <NavLink to='/' style={{ textDecoration: 'none', color: 'white' }}>
+          <button className='header-title' onClick={e => getSection('home')}>NYT News Reader</button>
+        </NavLink>
+      </header>
       <Header getSection={getSection}/>
-      <TopStory topStory={topStory!} />
-      <Stories stories={stories}/>
+      <Routes>
+        <Route index element={<Stories stories={stories} topStory={topStory!}/>}/>
+        <Route path=':section/:id' element={<SingleStory stories={stories} topStory={topStory!}/>}/>
+        <Route path=':section/current_top_story' element={<SingleStory stories={stories} topStory={topStory!} />} />
+      </Routes>
+      
+      
     </main>
   );
 }

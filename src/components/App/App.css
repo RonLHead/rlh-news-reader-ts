@@ -1,5 +1,20 @@
-.App {
-  text-align: center;
+.App-header {
+  background-color: #282c34;
+  width: 100vw;
+  font-size: calc(15px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.header-title {
+  font-size: 50px;
+  background-color: transparent;
+  border: none;
+  resize: none;
+  outline: none;
+  color: white;
+  /* margin-bottom: 1%; */
+  margin-top: 2.5%;
+  margin-left: 7%;
+  font-weight: bold;
 }
 
 * {

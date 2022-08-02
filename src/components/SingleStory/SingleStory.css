@@ -1,0 +1,39 @@
+.SingleStory-container {
+  margin-top: 1%;
+  margin-left: 6%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.SingleStory-title {
+  font-size: 38px;
+}
+
+.SingleStory-img {
+  border-radius: 15px;
+}
+
+.SingleStory-abstract {
+  font-size: 28px;
+}
+
+.link-text {
+  text-decoration: none;
+}
+
+.back-link {
+  margin-top: 2%;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  resize: none;
+  outline: none;
+  margin-bottom: 5%;
+}
+
+.back-link:hover, .link-text:hover {
+  color: #19B697;
+}
