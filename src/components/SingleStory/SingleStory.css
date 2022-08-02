@@ -4,11 +4,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .SingleStory-title {
   font-size: 38px;
-  text-align: center;
 }
 
 .SingleStory-img {
@@ -21,10 +21,6 @@
 
 .link-text {
   text-decoration: none;
-}
-
-.SingleStory-title, .SingleStory-img, .SingleStory-abstract {
-  width: 90vw;
 }
 
 .back-link {
