@@ -11,10 +11,7 @@ const Header: FC<HeaderProps> = ({ getSection }) => {
   const navigate = useNavigate();
 
   return (
-    <header className='Header'>
-      <NavLink to='/' style={{ textDecoration: 'none', color: 'white' }}>
-        <button className='Header-title' onClick={e => getSection('home')}>NYT News Reader</button>
-      </NavLink>
+    
       <nav className='Nav'>
         {location.pathname === '/' ? (
           <div className='Nav-wrapper'>
@@ -57,7 +54,6 @@ const Header: FC<HeaderProps> = ({ getSection }) => {
           </div>
         )}
       </nav>
-    </header>
   )
 }
 
