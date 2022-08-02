@@ -74,8 +74,8 @@ function App() {
       <Header getSection={getSection}/>
       <Routes>
         <Route index element={<Stories stories={stories} topStory={topStory!}/>}/>
-        <Route path=':section/current_top_story' element={<TopStory topStory={topStory!} />} />
-        <Route path=':section/:id' element={<SingleStory stories={stories} />}/>
+        <Route path=':section/:id' element={<SingleStory stories={stories} topStory={topStory!}/>}/>
+        <Route path=':section/current_top_story' element={<SingleStory stories={stories} topStory={topStory!} />} />
       </Routes>
       
       
