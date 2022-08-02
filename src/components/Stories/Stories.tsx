@@ -2,13 +2,15 @@ import ReactLoading from 'react-loading';
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { IStories } from '../App/App';
+import TopStory from '../TopStory/TopStory';
 import './Stories.css';
 
 interface HeaderProps {
   stories:IStories[];
+  topStory:IStories;
 }
 
-const Stories: FC<HeaderProps> = ({ stories }) => {
+const Stories: FC<HeaderProps> = ({ stories, topStory }) => {
 
   let storiesList = stories.map(story => {
     return (
@@ -22,10 +24,10 @@ const Stories: FC<HeaderProps> = ({ stories }) => {
             </div>
             {!story.multimedia ? (
               <ReactLoading 
-              type='bubbles'
-              color='gray'
-              width={'10%'}
-              height={'10%'}
+                type='bubbles'
+                color='gray'
+                width={'10%'}
+                height={'10%'}
               />
               ) : <img className='story-img' alt={story.multimedia[2].caption} src={story.multimedia[2].url}/>}
           </div>
@@ -45,6 +47,18 @@ const Stories: FC<HeaderProps> = ({ stories }) => {
   return (
     <section className='stories-wrapper'>
       <div className='story-container'>
+        {!topStory ? (
+          <ReactLoading 
+            type='bubbles'
+            color='gray'
+            width={'10%'}
+            height={'10%'}
+          />
+        ) : (
+          <Link to={`${topStory.section}/current_top_story`} style={{ textDecoration: 'none', color: 'black' }}>
+            <TopStory topStory={topStory}/>
+          </Link>
+        )}
         {storiesList}
       </div>
     </section>
