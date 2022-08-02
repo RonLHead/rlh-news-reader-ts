@@ -47,6 +47,7 @@ const Stories: FC<HeaderProps> = ({ stories, topStory }) => {
   return (
     <section className='stories-wrapper'>
       <div className='story-container'>
+        <h2 className='top-story-title'>Top Story</h2>
         {!topStory ? (
           <ReactLoading 
             type='bubbles'
