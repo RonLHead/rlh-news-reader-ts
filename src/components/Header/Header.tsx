@@ -19,8 +19,8 @@ const Header: FC<HeaderProps> = ({ getSection }) => {
               <button className='home' onClick={e => getSection('home')}>Home</button>
             </NavLink>
             <form>
-              <select id='category-select' className='section-select' onChange={e => getSection(e.target.value)}>
-                <option value="" disabled selected hidden key='default'>Filter by Category:</option>  
+              <select id='category-select' defaultValue={'DEFAULT'} className='section-select' onChange={e => getSection(e.target.value)}>
+                <option value="DEFAULT" disabled>Filter by Category:</option>  
                 <option value='home' key='all'>All</option>
                 <option value='arts'>Arts</option>
                 <option value='automobiles'>Automobiles</option>
