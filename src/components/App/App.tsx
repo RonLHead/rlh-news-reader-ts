@@ -45,7 +45,9 @@ export interface IMultimedia {
 function App() {
   const [stories, setStories] = useState <IStories[]>([]);
   const [section, setSection] = useState('');
-  const [topStory, setTopStory] = useState <IStories>()
+  const [topStory, setTopStory] = useState <IStories>();
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState('');
 
   const getStories = (section:string) => {
     if(!section) {
@@ -55,6 +57,10 @@ function App() {
       .then(data => {
         setTopStory(data.results.shift());
         setStories(data.results);
+        setIsLoading(false);
+      })
+      .catch(err => {
+        setError('Oops, something went wrong. Please try again later.');
       })
   }
 
@@ -78,8 +84,8 @@ function App() {
       </header>
       <Header getSection={getSection}/>
       <Routes>
-        <Route index element={<Stories stories={stories} topStory={topStory!}/>}/>
-        <Route path=':section/:id' element={<SingleStory stories={stories} topStory={topStory!}/>}/>
+        <Route index element={<Stories stories={stories} topStory={topStory!} isLoading={isLoading} error={error} />}/>
+        <Route path=':section/:id' element={<SingleStory stories={stories} topStory={topStory!} />}/>
         <Route path=':section/current_top_story' element={<SingleStory stories={stories} topStory={topStory!} />} />
       </Routes>
       
