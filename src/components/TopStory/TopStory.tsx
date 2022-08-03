@@ -6,13 +6,14 @@ import './TopStory.css';
 
 interface HeaderProps {
   topStory:IStories;
+  error:string;
 }
 
-const TopStory: FC<HeaderProps> = ({ topStory }) => {
+const TopStory: FC<HeaderProps> = ({ topStory, error }) => {
   let topStoryDisplay;
 
   if(!topStory.multimedia) {
-    topStoryDisplay = <Error />
+    topStoryDisplay = <Error error={error}/>
   } else {
     topStoryDisplay = (
       <section className='TopStory-container'>
