@@ -15,6 +15,7 @@ interface HeaderProps {
 
 const Stories: FC<HeaderProps> = ({ stories, topStory, isLoading, error }) => {
   let storiesList;
+  let errorMsg = 'Unable to load. Please try again later.';
 
   if(!stories.length) {
     storiesList = <h3>{error}</h3>
@@ -23,7 +24,7 @@ const Stories: FC<HeaderProps> = ({ stories, topStory, isLoading, error }) => {
       return (
         <section key={stories.indexOf(story)} id={stories.indexOf(story).toString()}>
           {!story.multimedia ? (
-            <Error />
+            <Error error={errorMsg}/>
           ) : (
             <>
               <Link to={`${story.section}/${stories.indexOf(story).toString()}`} style={{ textDecoration: 'none', color: 'black' }}>
@@ -73,10 +74,10 @@ const Stories: FC<HeaderProps> = ({ stories, topStory, isLoading, error }) => {
         <div className='story-container'>
           <h2 className='top-story-title'>Top Story</h2>
           {!topStory.multimedia ? (
-            <TopStory topStory={topStory}/>
+            <TopStory topStory={topStory} error={errorMsg} />
           ) : (
             <Link to={`${topStory.section}/current_top_story`} style={{ textDecoration: 'none', color: 'black' }}>
-              <TopStory topStory={topStory}/>
+              <TopStory topStory={topStory} error={errorMsg} />
             </Link>
           )}
           {storiesList}
