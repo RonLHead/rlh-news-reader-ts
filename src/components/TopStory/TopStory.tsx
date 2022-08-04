@@ -1,17 +1,19 @@
 import ReactLoading from 'react-loading';
 import { FC } from 'react';
 import { IStories } from '../App/App';
+import Error from '../Error/Error';
 import './TopStory.css';
 
 interface HeaderProps {
   topStory:IStories;
+  error:string;
 }
 
-const TopStory: FC<HeaderProps> = ({ topStory }) => {
-  
+const TopStory: FC<HeaderProps> = ({ topStory, error }) => {
   let topStoryDisplay;
-  if(!topStory) {
-    topStoryDisplay=<p>No top story</p>
+
+  if(!topStory.multimedia) {
+    topStoryDisplay = <Error error={error}/>
   } else {
     topStoryDisplay = (
       <section className='TopStory-container'>
@@ -24,9 +26,7 @@ const TopStory: FC<HeaderProps> = ({ topStory }) => {
       </section>
     )
   }
-  
 
-  
   return (
     <>
       {topStoryDisplay}
