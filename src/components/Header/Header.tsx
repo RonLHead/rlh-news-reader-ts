@@ -13,11 +13,11 @@ const Header: FC<HeaderProps> = ({ getSection }) => {
   return (
     
       <nav className='Nav'>
-        {location.pathname === '/' ? (
-          <div className='Nav-wrapper'>
-            <NavLink to='/' style={{ textDecoration: 'none', color: 'white' }}>
-              <button className='home' onClick={e => getSection('home')}>Home</button>
-            </NavLink>
+        <div className='Nav-wrapper'>
+          <NavLink to='/' style={{ textDecoration: 'none', color: 'white' }}>
+            <button className='home' onClick={e => getSection('home')}>Home</button>
+          </NavLink>
+          {location.pathname === '/' ? (
             <form>
               <select id='category-select' defaultValue={'DEFAULT'} className='section-select' onChange={e => getSection(e.target.value)}>
                 <option value="DEFAULT" disabled>Filter by Category:</option>  
@@ -46,13 +46,13 @@ const Header: FC<HeaderProps> = ({ getSection }) => {
                 <option value='us'>U.S.</option>
                 <option value='world'>World</option>
               </select>
-            </form>
-          </div>
-        ) : (
-          <div className='Nav-go-back'>
-            <button onClick={() => navigate(-1)} className='home'>Go Back</button>
-          </div>
-        )}
+            </form>  
+          ) : (
+            <div className='Nav-go-back'>
+              <button onClick={() => navigate(-1)} className='home'>Go Back</button>
+            </div>
+          )}
+        </div>
       </nav>
   )
 }
