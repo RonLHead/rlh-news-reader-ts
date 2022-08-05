@@ -11,20 +11,25 @@
   top: 0;
   padding-top: 0.5%;
   padding-bottom: 0.5%;
+  
 }
 
 .Nav-wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  width: 30%;
+  margin-left: 2%;
+  align-items: center;
 }
 
-.home, .section-select {
+.home, .section-select, .go-back {
   font-size: 25px;
 }
 
-::placeholder, .section-select, .Header-title, .home {
+.home {
+  margin-right: 5vw;
+}
+
+::placeholder, .section-select, .Header-title, .home, .go-back {
   cursor: pointer;
   font-weight: bold;
   color: white;
@@ -36,5 +41,5 @@
 }
 
 .Nav-go-back {
-  width: 10%;
+  width: 100%;
 }
