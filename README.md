@@ -3,7 +3,7 @@
 ## NYT News Reader serves as a platform for readers to access a current list of NYT articles. From this app, a reader can view article details, such as the its abstract and byline, and obtain a link to read the full story on the New York Time's website. This news reader also allows readers to filter stories based on subcategory.
 
 ### This application was created to submit as a Mod 4 take-home project for Turing School of Software & Design. 
-You can see it in action by visiting the [NTY News Reader](https://rlh-nyt-news-reader.surge.sh/) or on your local computer by following the instructions below. <br><br>
+You can see it in action by visiting the [NYT News Reader](https://rlh-nyt-news-reader.surge.sh/) or on your local computer by following the instructions below. <br><br>
 
 ### Useful Links!
 - [Deployed site](https://rlh-nyt-news-reader.surge.sh/)
