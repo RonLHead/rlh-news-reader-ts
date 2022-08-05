@@ -21,7 +21,7 @@
   align-items: center;
 }
 
-.home, .section-select {
+.home, .section-select, .go-back {
   font-size: 25px;
 }
 
@@ -29,7 +29,7 @@
   margin-right: 5vw;
 }
 
-::placeholder, .section-select, .Header-title, .home {
+::placeholder, .section-select, .Header-title, .home, .go-back {
   cursor: pointer;
   font-weight: bold;
   color: white;
@@ -41,5 +41,5 @@
 }
 
 .Nav-go-back {
-  width: 10%;
+  width: 100%;
 }
