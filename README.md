@@ -1,4 +1,4 @@
-![News Reader main page](https://user-images.githubusercontent.com/92322028/172988642-6caa78bf-e5e0-4672-90ba-41cb27ca7445.JPG)
+![News Reader main page](https://user-images.githubusercontent.com/92322028/183111702-1b2e0e33-28c0-4924-8186-c7d5f9ee86a9.JPG)
 
 ## NYT News Reader serves as a platform for readers to access a current list of NYT articles. From this app, a reader can view article details, such as the its abstract and byline, and obtain a link to read the full story on the New York Time's website. This news reader also allows readers to filter stories based on subcategory.
 
@@ -58,27 +58,27 @@ You can see it in action by visiting the [My News Reader](https://rlh-nyt-news-r
 **View Articles List:**
 On page load the user will see all the articles in the main New York Times subsection, which they can scroll up and down to view.
 
-![news-reader-articles-list](https://user-images.githubusercontent.com/92322028/172993688-3902befd-2a95-452e-926e-1854a36f6604.gif)
+![news-reader-articles-list](https://user-images.githubusercontent.com/92322028/183112602-6a3b9118-c3f8-4634-a43a-d111540263eb.gif)
 
 **View Article Details:**
 The user can click on an article, and it will route them to a detailed view of the story.
 
-![news-reader-article-details-view](https://user-images.githubusercontent.com/92322028/172994720-b32903d2-445d-4321-b4ae-62f5d59165af.gif)
+![news-reader-article-details-view](https://user-images.githubusercontent.com/92322028/183113136-6b381b5a-7986-4359-85ec-4df8bef7f394.gi)
 
 **Go to NYT Article:**
 The user can click on various links to direct themselves to the actual New York Times article.
 
-![news-reader-go-to-nyt](https://user-images.githubusercontent.com/92322028/172995525-b244ac0c-077c-4749-9d74-61612ae5536a.gif)
+![news-reader-go-to-nyt](https://user-images.githubusercontent.com/92322028/183113793-8c239902-4f2b-454b-9d4f-d23d005c061f.gif)
 
 **Go Back:**
 From the article details view, the user can click the Go Back button in the nav bar to route back to the main page.
 
-![news-reader-go-back](https://user-images.githubusercontent.com/92322028/172995058-66d2424c-dd39-4f92-8135-bf94d191c8d5.gif)
+![news-reader-go-back](https://user-images.githubusercontent.com/92322028/183114676-1863e928-93ed-4a7a-9497-696de70d7a31.gif)
 
 **Filter by Subsection:**
 The user can use the filter option to display articles based on the various subsections provided by NYT.
 
-![news-reader-filter](https://user-images.githubusercontent.com/92322028/172995824-007c47f3-3a7f-47f3-8608-1a578b902cec.gif)
+![news-reader-filter](https://user-images.githubusercontent.com/92322028/183115275-cdd62901-7492-44de-8d7f-024098b7bd22.gif)
 
 * * * 
 
@@ -100,8 +100,8 @@ The user can use the filter option to display articles based on the various subs
 - Ability to bookmark articles
 - View bookmarked articles
 - Remove bookmarked articles
-- Responsive CSS
 - End-to-End testing with Cypress
+- Testing automation with CircleCI
 
 # Contributor
 💻 Ron L Head |  [Github](https://github.com/RonLHead)  |  [LinkedIn](https://www.linkedin.com/in/ronlhead/)
