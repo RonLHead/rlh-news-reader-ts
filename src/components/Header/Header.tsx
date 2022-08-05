@@ -49,7 +49,7 @@ const Header: FC<HeaderProps> = ({ getSection }) => {
             </form>  
           ) : (
             <div className='Nav-go-back'>
-              <button onClick={() => navigate(-1)} className='home'>Go Back</button>
+              <button onClick={() => navigate(-1)} className='go-back'>Go Back</button>
             </div>
           )}
         </div>
