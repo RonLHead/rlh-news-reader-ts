@@ -38,7 +38,7 @@ You can see it in action by visiting the [NYT News Reader](https://rlh-nyt-news-
 
 ### As a visual learner with an associates in graphic design, I operate best when I can conceptualize how the project would look and operate. My News Reader began life as Figma wireframes to provide direction on how I want to structure my code and app functionality.
 
-ç![My News Reader wireframes](https://user-images.githubusercontent.com/92322028/172990875-48993749-a3c6-4125-8260-f769c5670b51.JPG)
+![My News Reader wireframes](https://user-images.githubusercontent.com/92322028/172990875-48993749-a3c6-4125-8260-f769c5670b51.JPG)
 
 * Please note I originally envisioned a bookmarking feature be included with this project. This was abandoned in order to meet the constraints of the MVP.
 
@@ -63,7 +63,7 @@ On page load the user will see all the articles in the main New York Times subse
 **View Article Details:**
 The user can click on an article, and it will route them to a detailed view of the story.
 
-![news-reader-article-details-view](https://user-images.githubusercontent.com/92322028/183113136-6b381b5a-7986-4359-85ec-4df8bef7f394.gi)
+![news-reader-article-details-view](https://user-images.githubusercontent.com/92322028/183113136-6b381b5a-7986-4359-85ec-4df8bef7f394.gif)
 
 **Go to NYT Article:**
 The user can click on various links to direct themselves to the actual New York Times article.
