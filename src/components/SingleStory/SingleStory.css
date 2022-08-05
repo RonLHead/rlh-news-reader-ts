@@ -3,8 +3,8 @@
   margin-left: 6%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
+  align-items: center;
 }
 
 .SingleStory-title {
@@ -12,7 +12,9 @@
 }
 
 .SingleStory-img {
+  width: 80%;
   border-radius: 15px;
+  display: inline;
 }
 
 .SingleStory-abstract {
@@ -36,4 +38,38 @@
 
 .back-link:hover, .link-text:hover {
   color: #19B697;
+}
+
+@media screen and (max-width: 65.625em) {
+  .SingleStory-img {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 38.125em) {
+  .SingleStory-title {
+    font-size: 35px;
+  }
+
+  .SingleStory-img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 35.625em) {
+  .SingleStory-title {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 32.5em) {
+  .SingleStory-title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 28em) {
+  .SingleStory-title {
+    font-size: 25px;
+  }
 }
